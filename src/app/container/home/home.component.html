@@ -1,6 +1,8 @@
+<h1>Home</h1>
 <div class="ui-grid-row" style="padding-top:40px; text-align:center">
     <div class="ui-grid-col-12">
-        <a [routerLink]="['/login']"><button pButton type="button" label="Login"></button></a>
-        <a [routerLink]="['/signup']"><button pButton type="button" label="Signup"></button></a>
+        <a [routerLink]="['/home', 'login']"><button pButton type="button" label="Login"></button></a>
+        <a [routerLink]="['/home', 'signup']"><button pButton type="button" label="Signup"></button></a>
     </div>
 </div>
+<router-outlet></router-outlet>

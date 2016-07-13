@@ -13,8 +13,18 @@ import {Button} from 'primeng/primeng';
 })
 
 export class Login {
-    constructor() {
+  
+    first_time:boolean=true;
+    constructor(private router :Router) {
         
+    }
+    
+    login(){
+      if(this.first_time == true){
+        this.router.navigate(['/signup-form1']);
+      }else {
+        this.router.navigate(['/dashboard']);
+      }
     }
 }
 

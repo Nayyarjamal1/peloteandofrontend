@@ -13,8 +13,29 @@ import {Button} from 'primeng/primeng';
 })
 
 
-export class Dashboard {
-    constructor() {
+export class Dashboard implements OnInit{
+  
+    tournamentList:Array<any>=[];
+  
+    constructor(private base_path_service:GlobalService) {
         
+    }
+    
+    ngOnInit(){
+      this.API_getTournamentList();
+    }
+    
+    API_getTournamentList(){
+      
+      var url = "http://football.innotical.com/api/tournament/tournamentDetail/";
+      this.base_path_service.GetRequest(url)
+        .subscribe(
+          res=>{
+            console.log(res[0].json);
+            this.tournamentList = res[0].json;
+          },
+          err=>{
+            console.log("error")
+        })
     }
 }

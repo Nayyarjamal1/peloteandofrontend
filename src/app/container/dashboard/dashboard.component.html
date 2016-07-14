@@ -1,6 +1,357 @@
-<h1>Dashboard</h1>
+<!--<h1>Dashboard</h1>
 <div class="ui-grid-row" style="padding-top:40px; text-align:center">
     <div class="ui-grid-col-12">
         <a [routerLink]="['/tournaments']"><button pButton type="button" label="Tournaments"></button></a>
     </div>
+</div>-->
+
+<div class="ui-grid ui-grid-responsive ui-grid-pad full-container">
+  <div class="main-container">
+
+    <!--header-->
+    <div class="ui-grid-row">
+      <div class="ui-grid-col-1 logo">
+        <img src="images/Logo.png" alt="logo">
+      </div>
+      <div class="ui-grid-col-7 heading">
+        <ul class="unorder">
+          <li>Fields </li>
+          <li>Teams</li>
+          <li style="border-right:none;">Tournaments</li>
+        </ul>
+      </div>
+      <div class="ui-grid-col-1 shoutout">
+        <small>SHOUTOUT</small>
+      </div>
+      <div class="ui-grid-col-3 icons">
+        <p><i class="fa fa-search faicon"></i>
+          <i class="fa fa-bell-o faicon"></i>
+          <small style="color:white;">Martin</small> <img src="" alt="martin"></p>
+      </div>
+    </div>
+
+    <!--section-->
+    <div class="ui-grid-row section">
+      <div class="ui-grid-col-8">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6 reserve">
+            <div class="ui-grid-row">
+
+              <div class="ui-grid-col-2">
+                <img src="images/playground.png" alt="">
+              </div>
+              <div class="ui-grid-col-10">
+                <p>RESERVE A PLACE TO PLAY</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="ui-grid-col-6  create">
+            <div class="ui-grid-row">
+
+              <div class="ui-grid-col-2">
+                <img src="images/price-stand.png" alt="">
+              </div>
+              <div class="ui-grid-col-10">
+                <p>CREATE A TOURNAMENT</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!--news feed-->
+        <div class="ui-grid-col-12 feed">
+          <h3>NEWS FEED</h3>
+        </div>
+
+        <!--challenge-->
+        <div class="ui-grid-row challenge">
+          <div class="ui-grid-col-5 ">
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">
+                <img src="images/Rectangle.png" alt="alt">
+              </div>
+              <div class="ui-grid-col-6">
+                <p>Bayern <br>Munich</p>
+              </div>
+            </div>
+          </div>
+          <div class="ui-grid-col-3 ">
+            <img src="images/Path.png" alt="image" height="120px" /><br>
+            <small>Match on 22 july 2016</small>
+          </div>
+          <div class="ui-grid-col-4 ">
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-4">
+                <p>Real <br>Madrid</p>
+              </div>
+              <div class="ui-grid-col-8">
+                <img src="images/Rectangle.png" alt="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--view tournament-->
+        <div class="ui-grid-row view">
+            <div class="ui-grid-col-12">
+                <img src="images/Rectangle.png" alt="CUP">
+                <h2>Bacre Claims the Quito Cup</h2>
+                <button pButton type="button" label="VIEW TOURNAMENTS" class="button-1"></button>
+            </div>
+        </div>
+
+
+        <!--top player-->
+        <div class="ui-grid-row">
+        <div class="ui-grid-col-12 players">
+          <h3>TOP PLAYERS NEAR YOU</h3>
+          <p><img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+          </p>
+        </div>
+        </div>
+
+        <!--super cup-->
+        <div class="ui-grid-row"  *ngFor="let tournament of tournamentList" style="padding-top:1%">
+            <div class="ui-grid-col-12 super">
+            <h1>{{tournament.tournament_name}}</h1>
+            <h3>{{tournament.description}}</h3>
+            <a [routerLink]="['/tournaments']"><button pButton type="button" label="REGISTER HERE" class="button-1"></button></a>
+            <p class="para"><small>Powered By</small> <img src="" alt=" image">
+                <img src="" alt="image"> <img src="" alt="image ">
+            </p>
+            </div>
+        </div>
+
+
+        <!--top teams-->
+        <div class="ui-grid-col-12 teams">
+          <h3>TOP TEAMS NEAR YOU</h3>
+          <p><img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png " alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+            <img src="images/Rectangle.png" alt="image">
+          </p>
+        </div>
+
+      </div>
+
+
+      <!--right-section-->
+      <div class="ui-grid-col-4 right-section">
+        <div class="ui-grid-col-12 challanges">
+          <div class="ui-grid-row">
+            <div class="ui-grid-col-2">
+              <img src="images/football_1_.png" alt="">
+            </div>
+            <div class="ui-grid-col-10">
+              <p>CHALLENGE A TEAM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-grid-col-12 scores">
+          <div clas="ui-grid-row">
+            <div class="ui-grid-col-6">
+              <h3>SCORES</h3>
+            </div>
+            <div class="ui-grid-col-6 today">
+              <p>Today</p>
+            </div>
+          </div>
+
+          <div clas="ui-grid-row">
+            <div class="ui-grid-col-12 final">
+              <img src="images/Rectangle.png" alt="image">
+              <h3>EURO 2016</h3>
+              <p>Final</p>
+            </div>
+          </div>
+
+          <div class="ui-grid-row matchess">
+            <div class="ui-grid-col-4">
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-4">
+                  <img src="images/Rectangle.png" alt="alt" width="30px">
+                </div>
+                <div class="ui-grid-col-6">
+                  <small>France</small>
+                </div>
+              </div>
+            </div>
+            <div class="ui-grid-col-3 timing">
+              <small style="text-align:center;">22:00</small>
+            </div>
+            <div class="ui-grid-col-5">
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-5">
+                  <small>Portugal</small>
+                </div>
+                <div class="ui-grid-col-6">
+                  <img src="images/Rectangle.png" alt="image" width="30px">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div clas="ui-grid-row knockout">
+            <h4 style="text-align:center;">Knockout Stages</h4>
+            <div class="ui-grid-col-12 final">  
+              <img src="images/Rectangle.png" alt="image">
+              <h3>QUITO CUP</h3>
+              <p>Day 34</p>
+            </div>
+          </div>
+
+          <div class="ui-grid-row match">
+            <div class="ui-grid-col-4">
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-4">
+                  <img src="images/Rectangle.png" alt="alt" width="30px">
+                </div>
+                <div class="ui-grid-col-6">
+                  <small>France</small>
+                </div>
+              </div>
+            </div>
+            <div class="ui-grid-col-3 timing">
+              <small style="text-align:center;">2-2</small>
+            </div>
+            <div class="ui-grid-col-5">
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-5">
+                  <small>Portugal</small>
+                </div>
+                <div class="ui-grid-col-6">
+                  <img src="images/Rectangle.png" alt="image" width="30px">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui-grid-row match">
+            <div class="ui-grid-col-4">
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-4">
+                  <img src="images/Rectangle.png" alt="alt" width="30px">
+                </div>
+                <div class="ui-grid-col-6">
+                  <small>France</small>
+                </div>
+              </div>
+            </div>
+            <div class="ui-grid-col-3 timing">
+              <small style="text-align:center;">2-3</small>
+            </div>
+            <div class="ui-grid-col-5">
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-5">
+                  <small>Portugal</small>
+                </div>
+                <div class="ui-grid-col-6">
+                  <img src="images/Rectangle.png" alt="image" width="30px">
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <div class="ui-grid-row finals">
+             <div class="ui-grid-col-6 rslt">
+               <p>Results</p>
+             </div>
+             <div class="ui-grid-col-6">
+               <p>Tables</p>
+             </div>
+           </div>
+        </div>
+
+
+        <!--paloteando rankings-->
+        <div class="ui-grid-col-12 paletando">
+          <h4>PALOTEANDO RANKINGS</h4>
+          <hr>
+          <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Ann Maxwell</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+
+           <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Billy Price</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+           <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Ann Maxwell</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+           <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Ann Maxwell</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+           <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Ann Maxwell</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+           <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Ann Maxwell</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+           <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Ann Maxwell</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+           <div class="ui-grid-row rank">
+             <div class="ui-grid-col-6">
+               <p>Ann Maxwell</p>
+             </div>
+             <div class="ui-grid-col-6 point">
+               <p>25 Pts</p>
+             </div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
 </div>

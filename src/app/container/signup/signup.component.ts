@@ -14,8 +14,12 @@ import {Button} from 'primeng/primeng';
 })
 
 export class Signup {
-    constructor() {
+    constructor(private router:Router) {
         
+    }
+    
+    signup(){
+      this.router.navigate(['/signup-form1']);
     }
 }
 

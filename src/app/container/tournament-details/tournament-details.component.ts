@@ -6,9 +6,9 @@ import {Button} from 'primeng/primeng';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-tournament-profile',
-  templateUrl: 'tournament-profile.component.html',
-  styleUrls: ['tournament-profile.component.css'],
+  selector: 'app-tournament-details',
+  templateUrl: 'tournament-details.component.html',
+  styleUrls: ['tournament-details.component.css'],
   directives:[ROUTER_DIRECTIVES, Button]
 })
 

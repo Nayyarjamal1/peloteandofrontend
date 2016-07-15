@@ -1,75 +1,129 @@
 .fb>button{
-    padding: 3% 15%;
+    padding: 2% 8%;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 1.2em;
     background: #4D67A0;
     border: 1px solid #4D67A0;
 }
 .fb>button:hover{
     background: #365899;
 }
-.google>button{
-    padding: 3% 15%;
-    border-radius: 25px;
-    font-size: 15px;
-    background: #da4336;
-    border: 1px solid #da4336;
-}
-.google>button:hover{
-    background: #b93221;
-}
+
 .heading>h2{
     margin-bottom: 6%;
     color:#8DD021;
+    margin: 0px;
 }
 .email>input[type="text"] {
     padding: 2% 27% 2% 4%;
     border-radius: 25px;
     border: 1px solid #cfcfcf;
     background: #f2f2f2;
+    outline:none;
+    font-size:1em;
+    color:#828282;
 }
 .email{
     margin-bottom: 3%;
+}
+.email>input[type="text"]:hover{
+   border:1px solid #a4a4a4;
+}
+.email>input[type="text"]:focus{
+   border:1px solid #8DCF25;
+}
+.contact>input[type="text"]:hover{
+   border:1px solid #a4a4a4;
+}
+.contact>input[type="text"]:focus{
+   border:1px solid #8DCF25;
 }
 .contact>input[type="text"] {
     padding: 2% 27% 2% 4%;
     border-radius: 25px;
     border: 1px solid #cfcfcf;
     background: #f2f2f2;
+    outline:none;
+    font-size: 1em;
+     color:#828282;
 }
 .or{
     padding: 2%;
+    font-size:1em;
+    color: #828282;
 }
 .celular{
     margin-top: 3%;
 }
 .login{
-    margin-top: 9%;
     margin-bottom: 2%;
 }
 .login>button{
-    padding: 2% 16%;
+    padding: 2% 12%;
     border-radius: 25px;
     font-size: 16px;
     background: #8DCF25;
     border:1px solid #8DCF25;
+    font-size:1.2em;
+}
+.login>button:focus{
+    background:#6da70f; 
+}
+.login>button:hover{
+    background:#a6de4a; 
+}
+.fb>button:focus{
+    background:#29487d; 
+}
+.fb>button:hover{
+    background:#365899; 
 }
 .unas>p{
     color:#8DCF25;
     float:left;
+    font-size: 0.8em;
+    cursor:pointer;
+}
+.unas>p:hover{
+    text-decoration: underline;
 }
 .ya>p{
     float:right;
+    color: #828282;
+    font-size: 0.8em;
+    padding-right: 2%;
 }
 .chkbox{
     text-align: left;
     padding-left: 8%;
 }
 .pahra{
-    font-size: 14px;
+    font-size: 0.8em;
     color:#cfcfcf;
     text-align: left;
 }
 .pahra>small{
     color:#8DCF25;
+}
+
+.padd{
+    padding-left: 8%;
+    padding-right: 6%;
+}
+
+@font-face {
+font-family: HomeHeader;
+src: url(./app/container/home/fonts/fonts.ttf);
+}
+@font-face {
+font-family: HomeHeader1;
+src: url(./app/container/home/fonts/Montserrat-Regular.ttf);
+}
+
+.heading>h2{
+  font-family:HomeHeader;
+  font-size:3em;  
+}
+.mont{
+   font-family:HomeHeader1; 
 }

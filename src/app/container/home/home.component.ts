@@ -4,6 +4,7 @@ import { Router } from '@angular/router'
 import { GlobalService } from './../../GlobalService';
 import {ROUTER_DIRECTIVES} from '@angular/router'
 import {Button} from 'primeng/primeng';
+import {InputText} from 'primeng/primeng';
 
 @Component({
   moduleId: module.id,

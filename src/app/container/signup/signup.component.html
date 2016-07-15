@@ -1,9 +1,48 @@
-<h1>Signup</h1>
-
-<div class="ui-grid-row" style="padding-top:40px; text-align:center">
-    <div class="ui-grid-col-12">
-        <!--<a [routerLink]="['/dashboard']">-->
-            <button pButton type="button" label="Signup" (click)="signup()"></button>
-        <!--</a>-->
+<div class="ui-grid-row">
+    <div class="ui-grid-col-12 heading">
+        <h2>SIGN UP</h2>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6 fb">
+               <button pButton type="button" label="Facebook" ></button> 
+            </div>
+            <div class="ui-grid-col-6 google">
+                <button pButton type="button" label="Google" ></button>
+            </div>
+        </div>
+        <p class="or">OR</p>
+        <div class="ui-grid-col-12 email">
+            <input type="text" pInputText placeholder="Nombre"/>
+        </div>
+        <div class="ui-grid-col-12 email">
+            <input type="text" pInputText placeholder="Email"/>
+        </div>
+         <div class="ui-grid-col-12 contact">
+            <input type="text" pInputText placeholder="Contrasena"/>
+        </div>
+        <div class="ui-grid-col-12 celular email">
+            <input type="text" pInputText placeholder="Celular"/>
+        </div>
+        <div class="ui-grid-row">
+        <div class="ui-grid-col-1"><p-checkbox></p-checkbox></div>
+        <div class="ui-grid-col-10 pahra"><label class="ui-widget pahra">He leido y acepto las <small>conditions de uso</small> y la <small>Politica de privacidad</small></label></div>
     </div>
+        <!--<div class="ui-grid-col-12 chkbox">
+            <p-checkbox style="float:left;"></p-checkbox>
+            <label class="ui-widget pahra">He leido y acepto las <small>conditions de uso</small> y la <small>Politica de privacidad</small></label>
+        </div>-->
+        <div class="ui-grid-col-12 login">
+             <button pButton type="button" label="CREA UNA CUENTA" (click)="login()"></button>
+        </div>
+        
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-8 ya">
+               <p>Ya tlenes una cuenta?</p>
+            </div>
+            <div class="ui-grid-col-4 unas">
+                <p>Sign In!</p>
+            </div>
+        </div>
+
+   </div>
 </div>
+

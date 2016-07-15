@@ -9,9 +9,13 @@ import {SignupForm2Details} from './container/signup-form2-details/signup-form2-
 
 export const routes: RouterConfig = [
     ...dashboardRoutes,
-    { path: '', component: Home},
+    { path: '', component: Home,
+      children: [
+      { path: '', component: Login}
+    ]},
     { path: 'home', component: Home,
       children: [
+      { path: '', component: Login},
       { path: 'login', component: Login},
       {path: 'signup', component: Signup}
     ]},

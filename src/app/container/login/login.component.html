@@ -1,8 +1,31 @@
-<h1>Login</h1>
-<div class="ui-grid-row" style="padding-top:40px; text-align:center">
-    <div class="ui-grid-col-12">
-        <!--<a [routerLink]="['/dashboard']">-->
-            <button pButton type="button" label="login" (click)="login()"></button>
-        <!--</a>-->
-    </div>
+<div class="ui-grid-row">
+    <div class="ui-grid-col-12 heading">
+        <h2>SIGN IN</h2>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6 fb">
+               <button pButton type="button" label="Facebook" ></button> 
+            </div>
+            <div class="ui-grid-col-6 google">
+                <button pButton type="button" label="Google" ></button>
+            </div>
+        </div>
+        <p class="or">OR</p>
+        <div class="ui-grid-col-12 email">
+            <input type="text" pInputText placeholder="Email"/>
+        </div>
+         <div class="ui-grid-col-12 contact">
+            <input type="text" pInputText placeholder="Contrasena"/>
+        </div>
+        <div class="ui-grid-col-12 login">
+             <button pButton type="button" label="INGRESAR" (click)="login()"></button>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+               <p>olvidaste tu cleve?</p>
+            </div>
+            <div class="ui-grid-col-6 una">
+                <a [routerLink]="['/home', 'signup']"> <p>crea una cuenta</p></a>
+            </div>
+        </div>
+   </div>
 </div>

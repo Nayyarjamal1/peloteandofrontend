@@ -1,0 +1,75 @@
+.fb>button{
+    padding: 3% 15%;
+    border-radius: 25px;
+    font-size: 15px;
+    background: #4D67A0;
+    border: 1px solid #4D67A0;
+}
+.fb>button:hover{
+    background: #365899;
+}
+.google>button{
+    padding: 3% 15%;
+    border-radius: 25px;
+    font-size: 15px;
+    background: #da4336;
+    border: 1px solid #da4336;
+}
+.google>button:hover{
+    background: #b93221;
+}
+.heading>h2{
+    margin-bottom: 6%;
+    color:#8DD021;
+}
+.email>input[type="text"] {
+    padding: 2% 27% 2% 4%;
+    border-radius: 25px;
+    border: 1px solid #cfcfcf;
+    background: #f2f2f2;
+}
+.email{
+    margin-bottom: 3%;
+}
+.contact>input[type="text"] {
+    padding: 2% 27% 2% 4%;
+    border-radius: 25px;
+    border: 1px solid #cfcfcf;
+    background: #f2f2f2;
+}
+.or{
+    padding: 2%;
+}
+.celular{
+    margin-top: 3%;
+}
+.login{
+    margin-top: 9%;
+    margin-bottom: 2%;
+}
+.login>button{
+    padding: 2% 16%;
+    border-radius: 25px;
+    font-size: 16px;
+    background: #8DCF25;
+    border:1px solid #8DCF25;
+}
+.unas>p{
+    color:#8DCF25;
+    float:left;
+}
+.ya>p{
+    float:right;
+}
+.chkbox{
+    text-align: left;
+    padding-left: 8%;
+}
+.pahra{
+    font-size: 14px;
+    color:#cfcfcf;
+    text-align: left;
+}
+.pahra>small{
+    color:#8DCF25;
+}

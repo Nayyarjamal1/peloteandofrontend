@@ -1,0 +1,101 @@
+.head{
+    text-align:center;
+}
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+.text-head>h1{
+    line-height: 0.1;
+    color: #8dcf24;
+    font-weight:bold;
+}
+.text-head{
+    margin-top: 2%;
+}
+.head{
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+.text-head>p{
+    color:white;
+    font-weight:bold;
+}
+.full-container{
+    background: url('./app/container/home/images/back.jpg');
+    background-size: 100% 100%;
+    padding-top: 2%;
+}
+.head>p{
+        color:white;
+        font-weight:bold;
+}
+.sign-grid{
+    text-align: center;
+    padding: 2%;
+    color:white;
+}
+.sign-grid>img{
+    margin-bottom: 6%;
+}
+.sign-grid>h4{
+    font-weight: bold;
+}
+.icons{
+    color: white;
+    text-align: center;
+    // position: absolute;
+    // top: 141%;
+    // left: 1%;
+}
+.icons>h3{
+    font-weight:bold;
+    color: #8dcf24;
+}
+.fa{
+    background: #113861;
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 7px;
+    margin:1%;
+}
+.section{
+    margin-bottom: 0%;
+}
+.left-section{
+    padding-top: 6%;
+}
+.unorder{
+    display: -webkit-inline-box;
+}
+.footer{
+    color: white;
+    background: #004A83;
+    margin-top: 3%;
+    padding-top: 1%;
+    padding-left: 3%;
+}
+.unorder>li{
+    list-style:none;
+    margin-right: 20%;
+}
+.footer-right{
+    padding-left: 10% !important;
+}
+.login{
+    color:black;
+    background: white;
+    padding: 0% 2% 0% 2%;
+    text-align: center;
+    border-radius:25px;
+}
+.sections{
+    margin-right: 5%;
+}
+
+
+@media screen and (min-width:320px) and (max-width:600px){
+    .text-head>h1{
+    line-height: 1;
+}
+}

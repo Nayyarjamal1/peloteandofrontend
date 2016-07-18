@@ -17,9 +17,8 @@ export class GlobalService {
     public res: Response;
 
     constructor(public http: Http, public router: Router) {
-        this.user_info = JSON.parse(localStorage.getItem('user_info'));
-        // console.log(this.user_info.token.access_token, 'access_token');
-        this.base_path = "http://52.77.112.20/";
+        this.user_info = JSON.parse(localStorage.getItem('userInfo'));
+        this.base_path = "http://football.innotical.com/";
     }
 
     public base_path_api() {
@@ -30,7 +29,7 @@ export class GlobalService {
 
         this.headers = new Headers();
         this.headers.append("Content-type", "application/json");
-        this.headers.append("Authorization", 'Bearer ' + this.user_info.token.access_token);
+        this.headers.append("Authorization", 'Bearer ' + this.user_info.token.acces_token);
         this.requestoptions = new RequestOptions({
             method: RequestMethod.Get,
             url: url,
@@ -56,15 +55,18 @@ export class GlobalService {
 
 
     public PostRequest(url: string, data: any): any {
-
-        if(this.user_info){
-            this.headers = new Headers();
-            this.headers.append("Content-type", "application/json");
-            this.headers.append("Authorization", 'Bearer ' + this.user_info.token.access_token);
-        }else {
-            this.headers = new Headers();
-            this.headers.append("Content-type", "application/json");
-        }
+        
+        this.headers = new Headers();
+        this.headers.append("Content-Type", "application/json");
+        // if (this.user_info) {
+        //     this.headers = new Headers();
+        //     this.headers.append("Content-type", "application/json");
+        //     this.headers.append("Authorization", 'Bearer ' + this.user_info.token.access_token);
+        // } else {
+        //     this.headers = new Headers();
+        //     this.headers.append("Content-type", "application/json");
+        //     console.log("nsdksahdu")
+        // }
 
         this.requestoptions = new RequestOptions({
             method: RequestMethod.Post,
@@ -72,7 +74,9 @@ export class GlobalService {
             headers: this.headers,
             body: JSON.stringify(data)
         })
-
+        
+        console.log(this.requestoptions)
+        
         return this.http.request(new Request(this.requestoptions))
             .map((res: Response) => {
                 if (res.status === 201) {
@@ -154,7 +158,8 @@ export class GlobalService {
                 if (error.status === 409) {
                     return Observable.throw(new Error(error.status));
                 }
-            }
-            );
+            });
     }
 }
+
+

@@ -1,8 +1,141 @@
-<h1>Login</h1>
-<div class="ui-grid-row" style="padding-top:40px; text-align:center">
+<div class="ui-grid-row">
+    <div class="ui-grid-col-12 heading">
+        <h2>SIGN IN</h2>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12 fb">
+               <button pButton type="button" label="Facebook" ></button> 
+            </div>
+            <!--<div class="ui-grid-col-6 google">
+                <button pButton type="button" label="Google" ></button>
+            </div>-->
+        </div>
+        <p class="or">OR</p>
+        <form [ngFormModel]="loginForm">
+            <div class="ui-grid-col-12 email">
+                <input type="text" pInputText ngControl="name" [(ngModel)]="loginDataIns.name" placeholder="Email"/>
+            </div>
+            <div class="ui-grid-col-12 contact">
+                <input type="text" pInputText ngControl="pass" [(ngModel)]="loginDataIns.password" placeholder="Contrasena"/>
+            </div>
+            <div class="ui-grid-col-12 login">
+                <button pButton type="button" [disabled]="!loginForm.valid" label="INGRESAR" (click)="login(loginDataIns)"></button>
+            </div>
+        </form>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+               <a [routerLink]="['/home/forgot-password']" style="color:black; text-decoration: none;"><p>olvidaste tu cleve?</p></a>
+            </div>
+            <div class="ui-grid-col-6 una">
+                <a [routerLink]="['/home', 'signup']"> <p>crea una cuenta</p></a>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+<!--<h1>Login</h1>-->
+<!--<div class="ui-grid-row" style="padding-top:40px; text-align:center">
     <div class="ui-grid-col-12">
-        <!--<a [routerLink]="['/dashboard']">-->
+        <a [routerLink]="['/dashboard']">
             <button pButton type="button" label="login" (click)="login()"></button>
-        <!--</a>-->
+        </a>
+    </div>
+</div>-->
+
+<!--<div class="background">
+    <div>
+        <img src="images/logo.png" alt="Image !" class="img-responsive center">
+    </div>
+    <div class="unete">
+        <h2><strong>ÚNETE A LA COMUNDIDAD</strong></h2>
+    </div>
+    <div class="mas">
+        <h1><strong>MÁS GRANDE DE FÚTBOL</strong></h1>
+    </div>
+
+    <div class="ui-g ">
+        <div class="ui-g-6 ui-md-6">
+            <div class="registrate">
+                <h3>REGÍSTRATE</h3>
+                <div style="margin-bottom:10px"><button pButton type="button" label="Ingresa con Facebook" (click)=facebookLogin($event)></button></div>
+                <div><a [routerLink]="['CreateUserComponent']">Crea una cuenta</a></div>
+            </div>
+        </div>
+        <div class="ui-g-6 ui-md-6">
+            <div *ngIf="visibility" class="warning">
+                <p-messages [value]="msgs"></p-messages>
+            </div>
+            <div class="signIn">
+                <h3 style="color:#009900">SIGN IN</h3>
+                <form [ngFormModel]="loginForm">
+                    <input [class.name]="name1" id="name" type="text" ngControl="name" [(ngModel)]="loginDataIns.name" (blur)="getStyle('name')"
+                        placeholder="Nombre" (mousedown)="setVisibilityFalse('name')">
+                    <input [class.name]="pass1" id="pass" type="password" ngControl="pass" [(ngModel)]="loginDataIns.password" (blur)="getStyle('pass')"
+                        placeholder="Usuario" (mousedown)="setVisibilityFalse('pass')">
+                    <div id="btn">
+                        <button type="text" pButton label="Forget password?" (click)="op.show($event,actualTarget)" style="font-size: 10px;"></button>
+                        <button class="loginButton" type="submit" style="margin-left:125px" [disabled]="!loginForm.valid" (click)=loginRequest1(loginDataIns)>Submit</button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div style="height:120px" class="relative">
+        <div class="ui-g absolute">
+            
+            <div style="height:120px;width:100%">
+                <div class="block">
+                    <image-card>
+                        <img src="images/twitter1.png" class="img1" alt="missing" height="80" width="80" />
+                        <heading>
+                            <h3>RESERVA CANCHAS</h3></heading>
+                        <footer>Aniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</footer>
+                    </image-card>
+                </div>
+                <div class="block">
+                    <image-card>
+                        <img src="images/heart.png" class="img1" alt="missing" height="80" width="80" />
+                        <heading>
+                            <h3>JUEGO EN TORNEOS</h3></heading>
+                        <footer>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. </footer>
+                    </image-card>
+                </div>
+                <div class="block" style="float:right;">
+                    <image-card>
+                        <img src="images/heart.png" class="img1" alt="missing" height="80" width="80" />
+                        <heading>
+                            <h3>RETA A EQUIPOS</h3></heading>
+                        <footer>Loem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</footer>
+                    </image-card>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
+
+<div class="ui-g enterate">
+    <div class="ui-g-12 ui-md-12 ui-sm-12">
+        <h1><b>ENTÉRATE DE LAS ÚLTIMAS NOTICIAS</b></h1>
+    </div>
+</div>
+
+<div class="ui-g" style="text-align:center">
+    <div class="ui-g-12 ui-sm-12 ui-md-12 ">
+        <span><img src="images/facebook500.png" height="60px" width="60px" class="img-circle"></span>
+        <span style="padding-left:20px"><img src="images/twitter-new.png" height="60px" width="60px" class="img-circle"></span>
+        <span style="padding-left:20px"><img src="images/camera.png" height="60px" width="60px" class="img-circle"></span>
+        <span style="padding-left:20px"><img src="images/youtube.png" height="60px" width="60px" class="img-circle"></span>
+    </div>
+    <div class="fPasswordPopup">
+        <p-overlayPanel #op [dismissable]="true" [showCloseIcon]="true">
+            <div>Forget Password</div>
+            <div><input type="text" placeholder="Enter your email here" class="fPasswordInput" #femail required/></div>
+            <div><input type="button" class="fPasswordBtn" value="submit" (click)=passwordReset(femail.value)/></div>
+            <a [routerLink]="['Pwd']">Next step</a>
+
+        </p-overlayPanel>
+    </div>
+</div>-->

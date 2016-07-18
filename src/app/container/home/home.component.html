@@ -1,8 +1,60 @@
-<h1>Home</h1>
-<div class="ui-grid-row" style="padding-top:40px; text-align:center">
-    <div class="ui-grid-col-12">
-        <a [routerLink]="['/home', 'login']"><button pButton type="button" label="Login"></button></a>
-        <a [routerLink]="['/home', 'signup']"><button pButton type="button" label="Signup"></button></a>
+<div class="ui-grid ui-grid-responsive ui-grid-pad full-container">
+    <div class="container">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12 head">
+                <img src="images/logo.png" width="195px">
+                <div class="text-head">
+                    <p>ÚNETE A LA COMUNDIDAD</p>
+                    <h1>MÁS GRANDE DE FÚTBOL</h1>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-row section">
+            <div class="ui-grid-col-8 sections">
+                <div class="ui-grid-row left-section">
+                    <div class="ui-grid-col-4 sign-grid">
+                        <img src="images/2.png" alt="">
+                        <h4 style="margin: 0">RESERVA CANCHES</h4>
+                        <p style="margin-top: 7px;">Lorem ipsum isset is a dummy data lorem ipsum data Lorem ipsum </p>
+                    </div>
+                    <div class="ui-grid-col-4 sign-grid">
+                        <img src="images/1.png" alt="">
+                        <h4 style="margin: 0">JUEGO EN TORNEOS</h4>
+                        <p style="margin-top: 7px;">Lorem ipsum isset is a dummy data lorem ipsum data Lorem ipsum </p>
+                    </div>
+                    <div class="ui-grid-col-4 sign-grid">
+                        <img src="images/3.png" alt="">
+                        <h4 style="margin: 0">RETA A EQUIPOS</h4>
+                            <!--position: absolute;top: 141%;left: 1%;-->
+                        <p style="margin-top: 7px;">Lorem ipsum isset is a dummy data lorem ipsum data Lorem ipsum </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-col-4 login">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-8 icons">
+                <h3>ENTÉRATE DE LAS ÚLTIMAS NOTICIAS</h3>
+                <p><i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="ui-grid-row footer">
+        <div class="ui-grid-col-6 ui-g-12">
+            <p>Pelotaendo. Copyright2015. Todos Ios derechos reservados</p>
+        </div>
+        <div class="ui-grid-col-6 ui-g-12 footer-right">
+            <ul class="unorder">
+                <li>Condiciones de uso</li>
+                <li>contactus</li>
+                <li>publicidad</li>
+            </ul>
+        </div>
     </div>
 </div>
-<router-outlet></router-outlet>

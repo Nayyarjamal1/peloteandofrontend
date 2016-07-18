@@ -27,7 +27,7 @@ export class Dashboard implements OnInit{
     
     API_getTournamentList(){
       
-      var url = "http://football.innotical.com/api/tournament/tournamentDetail/";
+      var url = this.base_path_service.base_path_api()+"tournament/tournamentDetail/";
       this.base_path_service.GetRequest(url)
         .subscribe(
           res=>{

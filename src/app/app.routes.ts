@@ -6,20 +6,29 @@ import {Dashboard} from './container/dashboard/dashboard.component'
 import {dashboardRoutes}  from './container/dashboard/dashboard.routes'
 import {SignupForm1Details} from './container/signup-form1-details/signup-form1-details.component';
 import {SignupForm2Details} from './container/signup-form2-details/signup-form2-details.component'
+import {ForgotPassword} from './container/forgot-password/forgot-password.component'
+import {ResetPasswordComponent} from './container/reset-password/reset-password.component'
 
 export const routes: RouterConfig = [
     ...dashboardRoutes,
-    { path: '', component: Home},
+    { path: '', component: Home,
+      children: [
+      { path: '', component: Login}
+    ]},
     { path: 'home', component: Home,
       children: [
+      { path: '', component: Login},
       { path: 'login', component: Login},
-      {path: 'signup', component: Signup}
+      {path: 'signup', component: Signup},
+      {path: 'forgot-password', component: ForgotPassword},
+      
     ]},
     // { path: 'login', component: Login},
     // { path: 'signup', component: Signup},
     { path: 'dashboard', component: Dashboard},
     { path: 'signup-form1', component: SignupForm1Details},
     { path: 'signup-form2', component: SignupForm2Details},
+    { path: 'reset-password-token', component: ResetPasswordComponent},
 ];
 
 export const APP_ROUTER_PROVIDERS = [

@@ -1,0 +1,173 @@
+.full-container{
+   background: #081023;
+}
+.heading>.unorder>li{
+    list-style: none;
+    margin-right: 4%;
+    border-right: 1px solid white;
+    padding-right: 4%;
+}
+.unorder{
+    display: -webkit-inline-flex;
+    color:white;
+}
+.shoutout>small{
+    background: #9AD643;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    padding: 2% 9% 2% 10%;
+}
+.icons{
+    padding-left: 4%;
+}
+.reserve{
+    background: #8DCF25;
+    color: white;
+    padding: 2%;
+    font-weight: bold;
+}
+.challanges{
+    background: #9B9B9B;
+    color: white;
+    padding: 4%;
+    font-weight: bold;
+    height: 75.59px;
+}
+.create{
+    background: #E6263D;
+    color: white;
+    padding: 2%;
+    font-weight: bold;
+    margin-left:10px;
+}
+.section{
+    margin-top:8%;
+}
+.faicon{
+    padding-right:12%;
+    color:white;
+}
+.feed{
+    margin-top:1%;
+    margin-bottom:1%;
+    padding-left: 3%;
+    color: #081023;
+    background: white;
+}
+.view{
+    text-align:center;
+    text-align: center;
+    background: #e3e3e3;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.button-1{
+    font-size: 12px;
+    font-weight:normal !important;
+    border-radius:15px;
+    padding: 3px 11px;
+}
+.players{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background: #e3e3e3;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+.super{
+    text-align: center;
+    background: #e3e3e3;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background: url("images/Bitmap.jpg");
+    background-size: cover;
+    color:white; 
+}
+.super>h1{
+    line-height: 0.4;
+}
+.para{
+    text-align: right;
+    padding-right: 3%;
+    
+}
+.teams{
+    margin-top: 1%;
+    text-align:center;
+    margin-bottom: 1%;
+    background: #e3e3e3;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.challenge{
+    margin-bottom: 1%;
+    background: #e3e3e3;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 4%;
+}
+.players>p>img{
+    width:85px;
+}
+.teams>p>img{
+    width:85px;
+}
+.view>img{
+    margin-bottom: -4%;
+}
+.scores{
+    background:white;
+    margin-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 15%;
+}
+.right-section{
+    margin-left:2%;
+}
+.today>p{
+    float: right;
+    padding-right: 8%;
+}
+.final{
+    text-align: center;
+    line-height: 0.4;
+    padding-top: 12%;
+    margin-bottom: 11%;
+}
+.timing{
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+}
+.match{
+    margin-bottom: 4%;
+}
+.rslt{
+    text-align: right;
+    padding-right: 7%;
+}
+.paletando{
+    background: white;
+    margin-top: 4%;
+    padding: 4%;
+}
+.point>p{
+    float: right;
+}
+.main-container{
+    padding-top: 2%;
+}
+@media screen and (min-width:1000px) and (max-width:1800px){
+.main-container{
+    width: 80%;
+    margin: auto;
+}
+}
+@media screen and (min-width:320px) and (max-width:1000px){
+.main-container{
+    width: 90%;
+    margin: auto;
+}
+}

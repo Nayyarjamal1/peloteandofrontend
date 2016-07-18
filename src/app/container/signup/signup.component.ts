@@ -14,11 +14,11 @@ import {Checkbox} from 'primeng/primeng';
 })
 
 export class Signup {
-    constructor() {
+    constructor(private router:Router) {
         
     }
 
-    Signup(){
-
+    signup(){
+      this.router.navigate(['/signup-form1']);
     }
 }

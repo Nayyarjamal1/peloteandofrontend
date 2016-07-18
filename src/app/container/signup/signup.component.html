@@ -3,46 +3,51 @@
         <h2>SIGN UP</h2>
         <div class="ui-grid-row">
             <div class="ui-grid-col-12 fb">
-               <button pButton type="button" label="Facebook" ></button> 
+                <button pButton type="button" label="Facebook"></button>
             </div>
             <!--<div class="ui-grid-col-6 google">
                 <button pButton type="button" label="Google" ></button>
             </div>-->
         </div>
         <p class="or">OR</p>
-        <div class="ui-grid-col-12 email">
-            <input type="text" pInputText [(ngModel)]="userObj.first_name" placeholder="Nombre"/>
-        </div>
-        <div class="ui-grid-col-12 email">
-            <input type="text" pInputText [(ngModel)]="userObj.email" placeholder="Email"/>
-        </div>
-         <div class="ui-grid-col-12 contact">
-            <input type="text" pInputText [(ngModel)]="userObj.password" placeholder="Contrasena"/>
-        </div>
-        <div class="ui-grid-col-12 celular email">
-            <input type="text" pInputText [(ngModel)]="userObj.mobile" placeholder="Celular"/>
-        </div>
-        <div class="ui-grid-row">
-        <div class="ui-grid-col-1"><p-checkbox></p-checkbox></div>
-        <div class="ui-grid-col-10 pahra"><label class="ui-widget pahra">He leido y acepto las <small>conditions de uso</small> y la <small>Politica de privacidad</small></label></div>
-    </div>
-        <!--<div class="ui-grid-col-12 chkbox">
+        <form role="form" [ngFormModel]="signupForm">
+            <div class="ui-grid-col-12 email">
+                <input type="text" pInputText ngControl="first_name" [(ngModel)]="userObj.first_name" placeholder="Nombre" maxlength="50" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
+            </div>
+            <div class="ui-grid-col-12 email">
+                <input type="text" pInputText ngControl="email" [(ngModel)]="userObj.email" placeholder="Email"/>
+            </div>
+            <div class="ui-grid-col-12 contact">
+                <input type="text" pInputText ngControl="password" [(ngModel)]="userObj.password" placeholder="Contrasena"/>
+            </div>
+            <div class="ui-grid-col-12 celular email">
+                <input type="text" pInputText ngControl="mobile" [(ngModel)]="userObj.mobile" placeholder="Celular" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-1">
+                    <p-checkbox></p-checkbox>
+                </div>
+                <div class="ui-grid-col-10 pahra"><label class="ui-widget pahra">He leido y acepto las <small>conditions de uso</small> y la <small>Politica de privacidad</small></label></div>
+            </div>
+            <!--<div class="ui-grid-col-12 chkbox">
             <p-checkbox style="float:left;"></p-checkbox>
             <label class="ui-widget pahra">He leido y acepto las <small>conditions de uso</small> y la <small>Politica de privacidad</small></label>
         </div>-->
-        <div class="ui-grid-col-12 login">
-             <button pButton type="button" label="CREA UNA CUENTA" (click)="signup()"></button>
-        </div>
-        
+            <div class="ui-grid-col-12 login">
+                <button pButton type="button" label="CREA UNA CUENTA" [disabled]="!signupForm.valid" (click)="signup()"></button>
+            </div>
+        </form>
+
         <div class="ui-grid-row">
             <div class="ui-grid-col-8 ya">
                 <p>Ya tlenes una cuenta?</p>
             </div>
             <div class="ui-grid-col-4 unas">
-                <a [routerLink]="['/home', 'login']"><p>Sign In!</p></a>
+                <a [routerLink]="['/home', 'login']">
+                    <p>Sign In!</p>
+                </a>
             </div>
         </div>
 
-   </div>
+    </div>
 </div>
-

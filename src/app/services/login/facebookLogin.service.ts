@@ -86,7 +86,7 @@ export class FacebookService
   {
       console.log("about to hit api and data is"+this.key);
       let fbObj={"access_token":this.key};
-      this.login_service.PostRequest(fbObj,"/peloteando/fb_login/")
+      this.login_service.PostRequest("/peloteando/fb_login/",fbObj)
       .subscribe(res => {
       console.log(res,"response returned");
       localStorage.setItem("userInfo",JSON.stringify(res));

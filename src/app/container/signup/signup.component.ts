@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validator, Validators, ControlGroup, Control } from '@angular/common';
+import { FormBuilder, Validators, ControlGroup, Control } from '@angular/common';
 import { Router, ROUTER_DIRECTIVES} from '@angular/router';
 import { GlobalService } from './../../GlobalService';
 import {Button} from 'primeng/primeng';
@@ -7,9 +7,9 @@ import { LoginService } from '../../services/login/login.service';
 
 class User {
   public password: string = "123456";
-  public email: string = "nayyarjamal@innotical.com";
+  public email: string = "@innotical.com";
   public first_name: string = "nayyar";
-  public mobile: number = 999999999;
+  public mobile: number = null;
   public dob: string = "2012-12-22";
 }
 
@@ -23,11 +23,17 @@ class User {
 })
 
 export class Signup {
-  
+  signupForm:ControlGroup;
   userObj: User;
   
-  constructor(private router: Router, private login_service:LoginService, private base_path_service:GlobalService) {
+  constructor(fb: FormBuilder,private router: Router, private login_service:LoginService, private base_path_service:GlobalService) {
       this.userObj = new User();
+      this.signupForm = fb.group({
+        first_name:[this.userObj.first_name, Validators.compose([Validators.required, Validators.maxLength[50], Validators.maxLength[3]])],
+        email:[this.userObj.email, Validators.compose([Validators.required])],
+        password:[this.userObj.password, Validators.compose([Validators.required, Validators.maxLength[50], Validators.minLength[4]])],
+        mobile:[this.userObj.mobile, Validators.compose([Validators.required, Validators.maxLength[10], Validators.minLength[3]])]
+      })
   }
 
   signup() {
@@ -36,7 +42,9 @@ export class Signup {
     this.login_service.PostRequest(url, this.userObj)
       .subscribe(res => {
         console.log(res.status);
-        // this.router.navigate(['/signup-form1']);
+        this.router.navigate(['/signup-form1']);
       })
   }
 }
+
+	
